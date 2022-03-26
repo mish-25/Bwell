@@ -67,4 +67,7 @@ We are planning to add a database to the diary that will store the entries. We a
 ## screenshots
 
 ![Cards](https://user-images.githubusercontent.com/90711782/160224563-f5602d5b-4daf-4b53-a060-f99253af7a5e.png)
-
+![Meditation](https://user-images.githubusercontent.com/90711782/160224591-bc78c021-fb49-41dd-a169-e5fffc2fcc53.png)
+![movie recmmendation](https://user-images.githubusercontent.com/90711782/160224594-0f70fe22-513e-4801-862c-0f3dedd0edce.png)
+![webpage](https://user-images.githubusercontent.com/90711782/160224602-e071dbbf-450d-4c08-8d83-5a25738f8d3e.png)
+![welcome](https://user-images.githubusercontent.com/90711782/160224604-e2317caf-d86c-41ac-a0d3-11f3c7f0820b.png)
