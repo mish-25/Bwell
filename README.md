@@ -66,8 +66,5 @@ We are planning to add a database to the diary that will store the entries. We a
 
 ## screenshots
 
-! [Screenshot] (Cards.png)
-! [Screenshot] (Meditation.png)
-! [Screenshot] (Movie recmmendation.png)
-! [Screenshot] (webpage.png)
-! [Screenshot] (welcome.png)
+![Cards](https://user-images.githubusercontent.com/90711782/160224563-f5602d5b-4daf-4b53-a060-f99253af7a5e.png)
+
