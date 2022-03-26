@@ -66,4 +66,8 @@ We are planning to add a database to the diary that will store the entries. We a
 
 ## screenshots
 
-
+! [Screenshot] (Cards.png)
+! [Screenshot] (Meditation.png)
+! [Screenshot] (Movie recmmendation.png)
+! [Screenshot] (webpage.png)
+! [Screenshot] (welcome.png)
