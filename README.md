@@ -1,9 +1,9 @@
-# Self care webite
+# Self care website
 
 Team name: B-well
 
 ## Team members
-Nishta Pande - nishta2802@gmail.com 
+Nishtha Pandey - nishtha2802@gmail.com 
 Keisha Gupte -keishagupte1007@gmail.com 
 Misha Azmi - azmimisha@gmail.com
 Manali Malavade - malavademanali@gmail.com
@@ -11,7 +11,7 @@ Sayali Panch - sayalipanch17@gmail.com
 Aarya Singh- assingh_b20@ce.vjti.ac.in
 
 ## Description:
-This is a resposive website on self care which targets children and young adults.
+This is a responsive website on self care which targets children and young adults.
 Themes covered:
  1. Understanding the importance of self-care 
  2. Understanding the aspects of self-care such as mental, physical and social self care. 
@@ -25,8 +25,8 @@ Sub topics in steps to promote self-care:
  6. Focusing on positivity by identifying and challenging negative and unhelpful thoughts.
  7. Spending time with friends or family members
  8. Coping with peers
-Additional Featurs:
- 1. Meditation Page - Provides a virtual backgroung of nature with serene music which meditates with you   
+Additional Features:
+ 1. Meditation Page - Provides a virtual background of nature with serene music which meditates with you   
  2. Suggestions for you - includes :
      a.Book recommendation
      b.Movie recommendation
@@ -36,7 +36,6 @@ Additional Featurs:
 Target Group for this website:
 [1.] School level a. Foundational stage b. Preparatory stage c. Middle stage d. Secondary stage 
 [2.] College / University level a. Youth
-
 
 ## Links
 Github repo link :https://github.com/mish-25/Bwell
@@ -53,7 +52,7 @@ Create CSS file and save with extension .css
 Create javascript file and save with extension .js
 
 ## Usage:
-This will help the students to be more aware of their own self, focus on their wellbeing and be able to take care of themselves as well as others.
+This will help the students to be more aware of their own self, focus on their well-being and be able to take care of themselves as well as others.
 The additional features like meditation and diary also provide a platform for stress and anxiety relief.
 
 ## Applications:
