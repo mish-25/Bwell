@@ -3,12 +3,12 @@
 Team name: B-well
 
 ## Team members
-Nishtha Pandey - nishtha2802@gmail.com 
-Keisha Gupte -keishagupte1007@gmail.com 
-Misha Azmi - azmimisha@gmail.com
-Manali Malavade - malavademanali@gmail.com
-Sayali Panch - sayalipanch17@gmail.com
-Aarya Singh- assingh_b20@ce.vjti.ac.in
+Nishtha Pandey - nishtha2802@gmail.com <br/>
+Keisha Gupte -keishagupte1007@gmail.com <br/>
+Misha Azmi - azmimisha@gmail.com <br/>
+Manali Malavade - malavademanali@gmail.com <br/>
+Sayali Panch - sayalipanch17@gmail.com <br/>
+Aarya Singh- assingh_b20@ce.vjti.ac.in <br/>
 
 ## Description:
 This is a responsive website on self care which targets children and young adults.
