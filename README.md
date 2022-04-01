@@ -37,7 +37,7 @@ Target Group for this website:
 [1.] School level a. Foundational stage b. Preparatory stage c. Middle stage d. Secondary stage 
 [2.] College / University level a. Youth
 
-## Links
+## Links:
 Github repo link :https://github.com/mish-25/Bwell
 
 ## Technology stack:
@@ -63,7 +63,7 @@ The additional features like meditation and diary also provide a platform for st
 ## Future scope:
 We are planning to add a database to the diary that will store the entries. We are also planning on making the recommendation system more extensive using ML and AI.   
 
-## screenshots
+## Screenshots
 
 ![Cards](https://user-images.githubusercontent.com/90711782/160224563-f5602d5b-4daf-4b53-a060-f99253af7a5e.png)
 ![Meditation](https://user-images.githubusercontent.com/90711782/160224591-bc78c021-fb49-41dd-a169-e5fffc2fcc53.png)
