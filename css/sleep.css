@@ -1,0 +1,170 @@
+body{
+    background-color: black;
+}
+
+* {
+  margin: 0;
+  padding: 15;
+}
+
+.imgbox {
+  display: grid;
+  height: 100%;
+}
+.center-fit {
+  max-width: 100%;
+  max-height: 100vh;
+  margin: auto;
+}
+li {
+  color: white;
+  font-size: 20px;
+}
+
+#head {
+    background-color: black;
+    text-align: center;
+    position: relative;
+    margin-top: 10px;
+    margin: 10px;
+    padding-top: 20px 10px 5px 20px;
+  
+}
+  
+#section {
+  width: 350px;
+  float: left;
+  padding: 90px;
+  padding-bottom: 0%;
+}
+
+p a{
+  text-decoration: none; 
+  color: #E7BFFF;
+}
+
+p a:hover{
+  color: #c8b6ff;
+  padding: "10px 20px 20px 10px";
+}
+  
+div a {
+  text-decoration: none;
+  color: #9eddff;
+  font-size: 15px;
+  display: inline-block;
+}
+
+a.ex1:hover,
+a.ex1:active {
+  color: #FFD9FF;
+}
+  
+div a {
+  font-family: 'Montserrat';
+  text-decoration: none ;
+  background-color: black;  
+  color: #9eddff;
+  font-size: 20px;
+  display: inline-block;
+}
+
+  /*quote text*/
+  #quote {
+    font-family: 'Waiting for the Sunrise';
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+  
+  h4 {
+    font-family: 'Loved by the King';
+    font-size: 40px;
+    text-align: left;
+    color: #9eddff;
+  }
+  
+  body {
+     background-image: no-repeat center center fixed ;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+    background-size:cover;
+    background-attachment: fixed;
+  }
+  
+  /*id selector for About section*/
+    .black-background {
+    background-color: black;
+    font-family: 'Amatic SC';
+    font-size: 20px;
+    font-weight: 100;
+    color: #ffd9ff;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 30px;
+    border-style: solid;
+    border-width: 1px;
+
+  }
+  
+  /* image selector for black background graphics*/
+    img {
+    float: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    max-width: 10%;
+    padding: 0px;
+  }
+
+  .quote-section{
+    background-color: #FFD9FF;
+    padding:0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 10px;
+    border-style: solid;
+    border-width: .5px;
+    
+  }
+
+  .item {
+    background: #333;
+    text-align: center;
+    height: 300px;
+}
+h2 {
+    margin: 0;
+    color: #888;
+    padding-top: 80px;
+    font-size: 30px;
+}
+  @media only screen and (max-width: 975px){
+    #welcome-section { 
+      color: #c8b6ff;
+      font-size: 65px;
+    }
+    h1 {
+      color:#c8b6ff;      
+    }
+
+    p{
+      font-size: 1px;
+    }
+
+    h2{
+      font-size: 2px;
+    }
+    .item{
+      font-size: 2px;
+    }
+
+  }
+
+
+
