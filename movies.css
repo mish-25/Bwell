@@ -1,0 +1,87 @@
+body{
+    background-color: black;
+}
+
+h1{
+    color: #FFD9FF;
+    padding-top:30px;
+    padding-left: 30px;
+    padding-bottom:30px;
+}
+
+.info{
+    width: 100%;
+}
+.info h2{
+    padding: 30px 30px 20px;
+    font-family: 'Megrim';
+    font-size: 50 px;
+    color: #FFD9FF;
+    line-height: 44px;
+}
+.info p{
+    padding: 0px 30px 20px;
+    font-family: 'Megrim';
+    font-size: 16 px;
+    color: #FFD9FF;
+    line-height: 24px;
+}
+.wrapper{
+    width: 100% ;
+}
+
+.imgdune {
+    width: 100%;
+}
+
+.space{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media only screen and (min-width: 760px) {
+    .wrapper{
+        width: 600px;
+        margin: 0 auto;
+
+    }
+
+    .info h2{
+        padding: 20px 0px 0px;
+        
+    }
+    .info p{
+        padding: 20px 0px 0px;
+        
+    }
+    .imgdune {
+        padding-top: 30px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .wrapper{
+        width: 1000px;
+        display:flex;
+    }
+    .info{
+        width: 50%;
+        float:right;
+        order:2;
+    }
+    .info h2{
+        padding: 20px 0px 0px 30px;
+        
+    }
+    .info p{
+        padding: 20px 0px 0px 30px;
+        
+    }
+    .imgdune {
+        padding-top: 0px;
+        width:500px;
+        height: 600px;
+        float:left;
+        order:1;
+    }
+}
