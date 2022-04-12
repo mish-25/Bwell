@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>HYGIENE</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="backbutton.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color:black;
+}
+
+.black-background {
+    background-color: black;
+    font-family: 'Amatic SC';
+    font-size: 20px;
+    font-weight: 100;
+    color: #ffd9ff;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    border-style: solid;
+    border-width: 1px;
+    
+  }
+
+/* Style the header */
+header {
+  background-color: black;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: #9eddff;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+  background-color:black;
+}
+
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: black;
+  padding: 20px;
+  
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: black;
+  padding: 10px;
+}
+
+/* Style the footer */
+footer {
+  background-color: black;
+  padding: 10px;
+  text-align: left;
+  color: #9eddff;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.verticalimg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+.verticalimg img {
+        width: 250px;
+        height: 280px;
+        padding: 3px;
+        margin-left: 3px;
+        border-radius: 25px;
+      }
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.parent {
+        position: relative;
+        max-width: auto;
+        margin: 0 auto;
+      }
+
+.parent img {
+        vertical-align: middle;
+        height: 610px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+
+.parent .text {
+        font-family: 'Megrim';
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);/* Fallback color */
+        background: rgba(0, 0, 0, 0.5);/* Black background with opacity */
+        color: #ffffff;
+        width: 100%;
+        padding: 20px;
+      }
+
+
+.container {
+        display: flex;
+        align-items: center;
+        justify-content: center
+      }
+
+img {
+        max-width: 100%
+      }
+
+.image {
+        flex-basis: 55%;
+        height: 220px;
+      }
+      
+.text {
+        font-size: 20px;
+        padding-left: 20px;
+      }
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.stext {
+  color: #9eddff;
+  font-size: 50px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 290px;
+  width: 100%;
+  text-align: center;
+}
+
+.atext {
+  color: #9eddff;
+  font-size: 50px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 320px;
+  width: 100%;
+  text-align: center;
+}
+
+.btext {
+  color: #9eddff;
+  font-size: 50px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 260px;
+  width: 100%;
+  text-align: center;
+}
+/* Number text (1/5 etc) */
+.numbertext {
+  color: black;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next {font-size: 11px}
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+  
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: left;
+  background-color: #ffd9ff;
+  height: 410px;
+  border-radius: 25px;
+  color: black;
+}
+
+</style>
+</head>
+<body>
+
+<div class="ctn">
+<a href="homepage_secondary.html" class="button b-blue">HOME</a>
+</div>
+
+<div class="parent">
+<img src="https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHlnaWVuZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" style="width:100%;">
+<div class="text">
+<h1 style = "font-family:Amatic SC;font-size:50px;font-style:bold; text-align:left; color: #E7BFFF;">HYGIENE</h1>
+
+<p style = "font-size:30px; font-style:italic;color: #E7BFFF;">
+"TAKE CARE OF YOUR BODY. IT'S THE ONLY PLACE YOU HAVE TO LIVE."
+</p>
+
+</div>
+</div>
+
+<br>
+<div class="black-background">
+<h1 style = "text-align:center;">HYGIENE</h1>
+<p>
+Personal hygiene is the art of keeping your body clean and healthy.This practice includes washing your hands, brushing your teeth, bathing, and more.And 
+because every day you come into germs and viruses, personal hygiene practices can protect you and the people around you against illnesses.
+They will also boost your self-confidence as people tend to avoid a person with poor personal hygiene.
+Good personal hygiene involves keeping all parts of the external body clean and healthy.It is important for maintaining both physical and mental health.
+In people with poor personal hygiene, the body provides an ideal environment for germs to grow, leaving it vulnerable to infection.
+On a social level, people may avoid a person with poor personal hygiene, which may result in isolation and loneliness. 			
+</p> 
+
+<div class="text">
+<h3 style = "font-family:Amatic SC;color:#ffd9ff; font-size:44px;font-style:bold; text-align:left;">What are some benefits of personal hygiene?</h3>
+<p style = "font-family:'Loved by the King'; font-size:23px;">
+<ol>
+  <li>Health Reasons and Benefits</li>
+<p>
+You can avoid being sick by just following some basic rules, such as washing your hands, bathing every day, and ensuring you change your clothes regularly.
+Rashes, athlete’s foot, small cuts, among other minor conditions, should be attended to as soon as you realize them.
+Failing to address these conditions could lead to them spreading, leading to more severe conditions. 
+The one simple precaution you can take is always to wash your hands regularly.After visiting the toilet, or whenever you suspect you might have come 
+into contact with foreign materials, you can wash your hands.  
+</p>
+
+  <li>Social Reasons and Benefits</li>
+<p>
+By maintaining proper hygiene, you’ll maintain good health and become attractive to people.However, you can’t remain healthy without adhering 
+to simple personal hygiene routine practices.Not following these simple personal hygiene practices will pose several risks to you and make you 
+unattractive to most people. And there’s nothing as frustrating as getting rejected by several people.
+Teach your child how to adhere to the personal hygiene routine practices. Helping them adhere to these practices will make them attractive to 
+people and accepted by their friends. Children who are rejected end up being depressed, and I’m sure you don’t want your child to go through such 
+trauma at such an early stage. 
+</p>
+  <li>Psychological Reasons and Benefits</li>
+<p>
+Most people’s confidence and self-esteem are usually affected by their body image. Our body image reflects how important it is that we have taken 
+our hygiene practices.Good hair, healthy teeth, and short, clean nails are signs of a healthy person. When you have all these, more people will 
+always love your company, and most people will find you attractive. Besides, all these give you the confidence to tackle day-to-day activities.
+First impressions usually matter a lot. You want people to have a first good impression.And you can only do this by grooming yourself properly.
+This starts with adhering to personal hygiene routine practices, such as cleaning your nails, trimming down your hair, washing your hands, among others.
+Finally, your success rate is increased when you are well-groomed. Keeping short and clean nails, bathing every day, putting on clean clothes, 
+washing your hands, among others, will increase your chances of succeeding in every social environment.   
+</p>
+</ol>
+</p> 
+<br>
+
+
+<h3 style = "font-family:Amatic SC;color:#ffd9ff; font-size:44px;font-style:bold; text-align:left;">What are some consequences of improper personal hygiene?</h3>
+<p style = "font-family:'Loved by the King'; font-size:26px;">
+<ol>
+  <li>Good personal hygiene translates to minor illnesses and improved health.However, poor personal hygiene practices can lead to minor issues,
+      such as body odor and greasy skin. They can also lead to severe problems, like illnesses.For example, it’s easier to transfer germs and bacteria 
+      into your mouth or eyes with dirty hands. As a result, you end up contracting some infections, including stomach viruses and pink eye.</li>
+  <br>
+  <li>Additionally, poor hygiene practices can affect your self-confidence in a social setting.Likewise, people with poor personal hygiene tend 
+      to suffer from isolation and loneliness. Looking presentable can give you a sense of pride in your appearance.</li>
+  <br>
+  <li>Failure to brush your teeth can lead to plaque buildup and dental issues.Sadly, poor dental hygiene is a risk factor for many health problems,
+      including heart disease. It’s therefore important to practice healthy dental hygiene to prevent such occurrences in the future.</li>
+  <br>
+  <li>Other notable conditions that may be prevented by observing good personal hygiene practices include:
+      <ul>
+      <li>Scabies</li>
+      <li>Pubic lice</li>
+      <li>Head lice</li>
+      <li>Body lice</li>
+      <li>Diarrhea</li>
+      <li>Athlete’s foot</li>
+      <li>Ringworm</li>
+      <li>Pinworms</li>
+      <li>Swimmer’s ear</li>
+      <li>Hot tub rash</li>
+      </ul>
+  </li>
+</ol>
+</p> 
+</div>
+</div>
+<br>
+<br>
+
+<br>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 7</div>
+  <img src="https://media.istockphoto.com/photos/soap-bar-and-liquid-shampoo-shower-gel-towels-spa-kit-picture-id584574708?b=1&k=20&m=584574708&s=170667a&w=0&h=20Ma40jz0s9UPDJ5j7DTSduFpivalRjXw-PfkZPgXp4=" style="width:100%">
+  <div class="atext">TYPES OF HYGIENE</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 7</div>
+  <img src="https://media.istockphoto.com/photos/manicure-picture-id155144555?b=1&k=20&m=155144555&s=170667a&w=0&h=s6x1tom6KeADxWaH2GJVY-3v39nbM9pBY0y-7_-PNco=" style="width:100%">
+  <div class="stext">NAIL HYGIENE</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 7</div>
+  <img src="https://media.istockphoto.com/photos/shot-of-an-adorable-little-boy-brushing-his-teeth-in-a-bathroom-with-picture-id1353561573?b=1&k=20&m=1353561573&s=170667a&w=0&h=DkZ4-W5HNZHG3rvdnob7xxmVOKidUrUG-lcPHKwDA8M=" style="width:100%">
+  <div class="stext">DENTAL HYGIENE</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 7</div>
+  <img src="https://media.istockphoto.com/photos/washing-hair-with-shampoo-picture-id1213680761?b=1&k=20&m=1213680761&s=170667a&w=0&h=OMQEmSydbsEOX0AY2ffJjcKG0-zb5nFHsQe_ZKrhqoY=" style="width:100%">
+  <div class="stext">SHOWER HYGIENE</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 7</div>
+ <img src="https://media.istockphoto.com/photos/sick-woman-blowing-her-nose-picture-id1078066970?b=1&k=20&m=1078066970&s=170667a&w=0&h=TEN2ixBDC6h04ETJrepjsvnE3ZwAg1o4r1f2YolIm5s=" style="width:100%">
+  <div class="atext">SICKNESS HYGIENE</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 7</div>
+  <img src="https://media.istockphoto.com/photos/practice-good-hygiene-picture-id1131973999?b=1&k=20&m=1131973999&s=170667a&w=0&h=Kpuat7_98F9Yy_-yCJdMpJ7IPcjlb-OUfG6kKVvzSss=" style="width:100%">
+  <div class="btext">HANDS HYGIENE</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">7 / 7</div>
+  <img src="images/toilethygiene.jpg" style="width:100%">
+  <div class="stext">TOILET HYGIENE</div>
+</div>
+
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+</div>
+<br>
+
+<div class="black-background">
+<header>
+  <h3>TIPS FOR CREATING A PERSONAL HYGIENE ROUTINE</h3>
+</header>
+
+<section>
+  <nav>
+    <div class="verticalimg">
+      <br>
+      <img src=
+"https://i.redd.it/vuxlkwt671871.png"
+        alt="image-1"/>
+<br>
+      <img src=
+"https://media.istockphoto.com/photos/travel-cosmetic-bag-with-the-necessary-means-to-care-for-womens-skin-picture-id1220167936?b=1&k=20&m=1220167936&s=170667a&w=0&h=UBkfHsZj-p7VpF4mcMvlNsymhx8JKyQJph0xu95Icbs="
+        alt="image-2"/>
+<br>
+      <img src=
+"https://i.pinimg.com/474x/af/c6/82/afc682afa1df6cc57c0a73e0bd63e0ab.jpg"
+        alt="image-3"/>
+<br>
+</div>
+  </nav>
+
+  <article>
+    <h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">1.Make it a habit.</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:23px;color: white;">
+It takes time to learn a new habit. Start with a new habit at the beginning of the week and make it your priority.Practice it for a week or two.
+When you feel comfortable with it, add a new one. Overtime, you’ll establish the habits you wish to have.
+</p>
+
+
+
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">2.Set reminders.</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">
+If you can’t remember to do things like shower, wash your hair, clip your nails, or brush your teeth, set a reminder on your phone.
+The cue will push you to the activity, and over time, you’ll begin to do it yourself.Using the notes app on a cell phone can be a great way to avoid 
+forgetting any tasks.
+</p>
+
+
+
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">3.Use rewards.</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">
+A sticker chart can be a brilliant incentive to maintain their personal hygiene.
+
+</p>
+
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">4.Invest in nice toiletries.</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">
+Using products that smell good may encourage some people to stick to their personal hygiene routine.
+
+</p>
+
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">5.Use signs.</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">
+Hang a reminder in the bathroom to wash your hands after using the toilet.Put a little sign by the plates or bowls in the kitchen to cue yourself 
+to wash your hands before eating.These signs can help jog your memory and improve your habits.
+</p>
+
+
+  </article>
+</section>
+
+<footer>
+
+<h2 style="text-align:left;">PERSONAL HYGIENE FOR WOMEN</h2>
+<p style="text-align:left;color: white;" >
+
+<ul>
+<li>Menstruation - wash your body, including your genital area, in the same way as you always do.Change tampons and sanitary napkins regularly,
+at least four to five times a day. Always wash your hands before and after handling a tampon or pad.</li>
+<li>Cystitis - is an infection of the bladder.This is a common condition for sexually active young women.Urinating after sexual intercourse 
+can help to flush out any bacteria that may be in the urethra and bladder.</li>
+<li>Thrush - some soaps and detergents can irritate the skin of the vagina, and make thrush infections more likely.Some people find that they 
+often get thrush when they use antibiotics. Use mild soap and unperfumed toilet paper. Avoid tight, synthetic underwear.Try cotton underwear, 
+and change regularly. There is medical treatment for thrush, so talk to your doctor or pharmacist.</li>
+</ul>
+
+</p>
+
+<h2 style="text-align:left;">PERSONAL HYGIENE FOR MEN</h2>
+<p style="text-align:left;color:#9eddff;" >
+
+A build-up of secretions called smegma can form under the foreskin of uncircumcised men.If you are uncircumcised, gently pull back the foreskin 
+when you have a shower and clean with water.You can use soap if you like, but make sure you rinse it off well.
+
+</p>
+
+<h2 style="text-align:left;">TRAVELLING HYGIENE</h2>
+<p style="text-align:left; color: black;">
+<p style = "color:white;">
+<ul>
+<li>Drink only bottled water.</li>
+<li>Don’t use tap water to clean your teeth.</li>
+<li>Don’t wash fruit or vegetables in unsafe water.</li>
+<li>If you have no other water source, make sure the water is boiled before you drink it by holding it at a rolling boil for one minute.</li>
+<li>Make sure any dishes, cups or other utensils are totally dry after they are washed.</li>
+</ul>
+</p>
+</p>
+
+<br>
+<h2 style="text-align:center;">HYGIENE STEPS TO BE FOLLOWED</h2>
+<br>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <h3 style="color:black; text-align:center;">NAIL HYGIENE</h3>
+      <p style="text-align:left;" >
+       <ul>
+<li>Trim your nails regularly to keep them short and clean.</li>
+<li>Brush under them with a nail brush or washcloth to rinse away buildup, dirt, and germs.</li>
+<li>Tidying your nails helps you prevent spreading germs into your mouth and other body openings.</li>
+<li>You should also avoid biting your nails.</li>
+</ul>
+
+      </p>
+      </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <h3 style="color:black; text-align:center;">DENTAL HYGIENE</h3>
+      <p>
+<ul>
+<li>Floss between your teeth daily, and ask your dentist about using an antibacterial mouthwash.</li>
+<li>Brush at least twice a day for 2 minutes.</li>
+<li>Aim to brush after you wake up and before bed. If you can, brush after every meal, too. </li>
+</ul>
+
+</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <h3 style="color:black; text-align:center;">SICKNESS HYGIENE</h3>
+      <p>
+<ul>
+<li>If you’re not feeling well, you should take steps to keep from spreading germs to others.</li>
+<li>Cover your mouth and nose when sneezing, wipe down shared surfaces with an antibacterial wipe, and do not share any utensils or electronics.</li>
+<li>Immediately throw away any soiled tissues.</li>
+</ul>
+
+</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <h3 style="color:black; text-align:center;">HANDS HYGIENE</h3>
+<p style="text-align:center; font-size:20px;"> Germs on your hands can easily enter your body through your mouth, nose, eyes, or ears. Wash your hands:
+      </p>
+<ul>
+<li>when you handle food</li>
+<li>before you eat</li>
+<li>if you handle garbage</li>
+<li>when you sneeze</li>
+<li>any time you touch an animal</li>
+</ul>
+      
+    </div>
+  </div>
+</div>
+
+</footer>
+</div>
+
+<br>
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
+

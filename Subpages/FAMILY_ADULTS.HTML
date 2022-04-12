@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>FAMILY_ADULTS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="backbutton.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color:black;
+}
+
+.black-background {
+    background-color: black;
+    font-family: 'Amatic SC';
+    font-size: 20px;
+    font-weight: 100;
+    color: #ffd9ff;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    border-style: solid;
+    border-width: 1px;
+    
+  }
+
+/* Style the header */
+header {
+  background-color: black;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: #9eddff;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+  background-color:black;
+}
+
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: black;
+  padding: 20px;
+  
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: black;
+  padding: 10px;
+}
+
+/* Style the footer */
+footer {
+  background-color: black;
+  padding: 10px;
+  text-align: left;
+  color: #9eddff;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.verticalimg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+.verticalimg img {
+        width: 250px;
+        height: 280px;
+        padding: 3px;
+        margin-left: 3px;
+        border-radius: 25px;
+      }
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.parent {
+        position: relative;
+        max-width: auto;
+        margin: 0 auto;
+      }
+
+.parent img {
+        vertical-align: middle;
+        height: 610px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+
+.parent .text {
+        font-family: 'Megrim';
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);/* Fallback color */
+        background: rgba(0, 0, 0, 0.5);/* Black background with opacity */
+        color: #ffffff;
+        width: 100%;
+        padding: 20px;
+      }
+
+
+.container {
+        display: flex;
+        align-items: center;
+        justify-content: center
+      }
+
+img {
+        max-width: 100%
+      }
+
+.image {
+        flex-basis: 55%;
+        height: 220px;
+      }
+      
+.text {
+        font-size: 20px;
+        padding-left: 20px;
+      }
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.stext {
+  color: #9eddff;
+  font-size: 50px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 290px;
+  width: 100%;
+  text-align: center;
+}
+
+.atext {
+  color: #9eddff;
+  font-size: 45px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 320px;
+  width: 100%;
+  text-align: center;
+}
+
+.btext {
+  color: #9eddff;
+  font-size: 50px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 260px;
+  width: 100%;
+  text-align: center;
+}
+/* Number text (1/5 etc) */
+.numbertext {
+  color: black;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next {font-size: 11px}
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+  
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: left;
+  background-color: #ffd9ff;
+  height: 410px;
+  border-radius: 25px;
+  color: black;
+}
+
+</style>
+</head>
+<body>
+
+<div class="ctn">
+<a href="homepage_secondary.html" class="button b-blue">HOME</a>
+</div>
+
+<div class="parent">
+<img src="https://media.istockphoto.com/photos/above-view-of-playful-parents-tickling-their-daughters-at-home-picture-id1159543952?b=1&k=20&m=1159543952&s=170667a&w=0&h=1z25NA7zg8QaVsld8lLcku1tfr4PdN4HljObZF2tdng=" style="width:100%;">
+<div class="text">
+<h1 style = "font-family:Amatic SC;font-size:50px;font-style:bold; text-align:left; color: #E7BFFF;">SPENDING TIME WITH FAMILY AND FRIENDS</h1>
+
+<p style = "font-size:30px; font-style:italic;color:#E7BFFF">
+"THE LOVE OF FAMILY AND FRIENDS CAN KEEP YOU WARM DURING THE LONLIEST OF NIGHTS."
+</p>
+
+</div>
+</div>
+
+<br>
+<div class="black-background">
+<p style = "font-family:'Loved by the King'; font-size:23px;">
+Spending more time with your friends and family is beneficial to your mental wellbeing, as well as your relationships.With friends and family your 
+good times are better, and your sorrows are shared –so don’t overlook this important area in life!		
+</p> 
+
+<div class="text">
+<h1 style = "font-family:Amatic SC;color:#ffd9ff; font-size:44px;font-style:bold; text-align:left;">Family</h1>
+<p style = "font-family:'Loved by the King'; font-size:23px;">
+Spending time with family is one of the best ways to create memorable experiences.Nothing can replace the time you spend with your family.
+This is especially true if you have children.With younger children, there’s a good chance that you already spend a lot of time with them, 
+with older children and teenagers though, who may prefer to spend time with their friends, it can be more difficult to carve out family time.  
+</p>
+<p style = "font-family:'Loved by the King'; font-size:23px;">
+If you don’t know where to start, consider starting small: dinner at the table, a board game in the evening.If games aren’t your family’s idea 
+of a good time, try outside activities -perhaps a walk to the park.Even projects around the house can be a great way to get everyone 
+involved and working towards a goal. Encourage your family to spend time together by looking out for opportunities to do things that everyone 
+would be interested in. It may be a challenge at first, but soon it will become second nature.
+</p>
+
+
+<br>
+
+
+<h1 style = "font-family:Amatic SC;color:#ffd9ff; font-size:44px;font-style:bold; text-align:left;">Friends</h1>
+<p style = "font-family:'Loved by the King'; font-size:23px;">
+As we get older, and life gets faster – the time we once had for our friends, seems to diminish.You might not notice it at first, 
+      but soon your coffee dates are being replaced by school meetings. Your carefree mornings are busy and rushed, and the phone calls you used 
+      to make daily to chat with your best friend are slowly turning into every other week (or month!) catch up calls.Fitting in time for friends 
+      is sadly one of the first things to go when life gets busy, and before you know it – you hardly know the person you used to call your best friend.
+</p>
+<p style = "font-family:'Loved by the King'; font-size:23px;">
+  This fact is though, that while this is tragic, it’s also preventable! Spending time with friends is one of the few pleasures in life that 
+  can cost you very little, but reward you substantially.It is also proven to be one of the best ways to combat stress.
+  Spending time with your friends can help melt away the cares of the world, and leave you a better person all around.
+</p> 
+</div>
+</div>
+<br>
+<br>
+
+<br>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://media.istockphoto.com/photos/mixed-race-parents-helping-children-in-homework-at-home-picture-id1270069171?b=1&k=20&m=1270069171&s=170667a&w=0&h=KeHP7vtcyr0ZiNB4WDjVyfTD8ECHXEEfFdB6SrCnH80=" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://media.istockphoto.com/photos/family-donating-unwanted-items-picture-id1097031118?b=1&k=20&m=1097031118&s=170667a&w=0&h=H8qGeA4J4aPyvnEAfASCh3_qgqwxx_UNVmelrLqxzeg=" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://media.istockphoto.com/photos/family-gathering-picture-id1196170672?b=1&k=20&m=1196170672&s=170667a&w=0&h=HGbqKWCZFsqdpKxd_aSxxOvz4yGL_PzKOCOuAfb-3kI=" style="width:100%">
+  
+</div>
+
+
+
+
+
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<br>
+
+<div class="black-background">
+<header>
+  <h3>WAYS TO MAXIMIZE FAMILY TIME</h3>
+</header>
+
+<section>
+  <nav>
+    <div class="verticalimg">
+      <br>
+      <img src=
+"https://media.istockphoto.com/photos/young-happy-family-talking-while-having-lunch-at-dining-table-picture-id1132278686?b=1&k=20&m=1132278686&s=170667a&w=0&h=8w8hwEUJdgw_uhRpEshjbHn6W8h6VpsEldOHWZl_xz8="
+        alt="image-1"/>
+<br>
+      <img src=
+"https://media.istockphoto.com/photos/vitality-concept-watch-repeat-the-moves-poses-from-the-helpful-video-picture-id931310312?b=1&k=20&m=931310312&s=170667a&w=0&h=sIMSh3sNw64xSoiKlO5FenhberM3ypJ27QOgAkNhVVQ="
+        alt="image-2"/>
+<br>
+      <img src=
+"https://media.istockphoto.com/photos/hispanic-family-walking-in-park-together-picture-id514134693?b=1&k=20&m=514134693&s=170667a&w=0&h=9fbxhbW2ijM1MHMgFxcMV6ZqwWYQwgH1TuX5LgyJYsY="
+        alt="image-3"/>
+<br>
+      <img src=
+"https://media.istockphoto.com/photos/young-family-with-two-small-children-indoors-in-bedroom-reading-a-picture-id1199623208?b=1&k=20&m=1199623208&s=170667a&w=0&h=Tn476h5gyNU3zRiTSCHdQ9HUvsUxxCPzcg0KPPiqCkw="
+        alt="image-4"/>
+<br>
+      <img src=
+"https://media.istockphoto.com/photos/family-at-the-fairground-picture-id916603568?b=1&k=20&m=916603568&s=170667a&w=0&h=bbQd0ZD2QWs5tVQaffPSNngPKGdXRVL-9UFLJcwVjqg="
+        alt="image-5"/>
+<br>
+      <img src=
+"https://media.istockphoto.com/photos/happy-family-mother-father-children-son-and-daughter-on-sunset-picture-id996496112?b=1&k=20&m=996496112&s=170667a&w=0&h=eefR7TB_D5AcS20395qEicPAFYVKAecscGcGFVja3KM="
+        alt="image-6"/>
+<br>
+      <img src=
+"https://media.istockphoto.com/photos/meal-cooked-by-the-whole-family-tastes-better-picture-id1164904657?b=1&k=20&m=1164904657&s=170667a&w=0&h=nMAOQpj6JD5nnduLCkg2anz5QrwmiMw8cIhZxLSzNMQ="
+        alt="image-7"/>
+<br>
+</div>
+  </nav>
+
+  <article>
+    <h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">1.Have At Least One Meal Together</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:23px;color: white;">
+Make it a point to have at least one meal together as a family. You could have breakfast or dinner together. We know that having lunch together every day is not possible because of your jobs but don’t let that stop you from spending time as a family Enjoy a meal together, share your thoughts and feelings, and spend quality time.
+</p>
+
+
+
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">2.Exercise or Workout Together</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">
+Working out with your family members can be a lot of fun.This is a double win for all as this way you will be healthy as well.Join the local gym, or simply, work out at home if you’ve got the equipment. You can also teach your kids to exercise. Start teaching simple exercises to your kids; once they get a knack of it, they will look forward to exercising schedules and spending time with you.
+</p>
+
+
+
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">3.Go for a Walk After Dinner</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">
+There’s just something beautiful about the nights, don’t you think? There is silence but it is peaceful. It’s the best time to go for a walk. After your meal and before going to bed, make it a point to take a walk or stroll on the empty road outside. Take your family along. Talk to each other, make plans for the future, and just enjoy!
+
+</p>
+
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">4.Pick a Book to Read</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">
+You could read a book to your little one.Inculcating the habit of reading is a great way to expand knowledge and creativity. Pick a good book to read, and you can later discuss what you’ve read. This way you can spend time with your kid and help him learn a new story as well.
+
+</p>
+
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">5.Plan a Day Out Each Month</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">
+Once a month, go out on a field trip or picnic. And every year, plan a vacation to a place where you have never been before. Travelling and visiting places can be great fun and is a fantastic way to spend some quality time with your family.
+</p>
+
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">5.Plan a Day Out Each Month</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">
+Once a month, go out on a field trip or picnic. And every year, plan a vacation to a place where you have never been before. Travelling and visiting places can be great fun and is a fantastic way to spend some quality time with your family.
+</p>
+
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">6.Turn Off Your Phone</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">
+You’re with your family. The plan is to spend quality time. Taking calls, especially from work, should be the last thing you do when you’re spending time with your family. So, switch off your phones and focus on each other.
+</p>
+
+
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">7.Cook a Meal Together</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">
+Cooking is a great activity and doing this together as a family is a great way to spend family time. You can cook a new dish each time, or stick to an old tradition and cook a particular dish that is an old recipe passed on through generations.
+</p>
+
+
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">8.Clean the House Together</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">
+Cleaning the house may not sound fun, but when you do it together as a family, it becomes fun. You could revamp your house, move the furniture around, and get rid of all that clutter. At the end of the day, you’ll be satisfied to see that you did something productive and spent time with your family as well.
+</p>
+
+
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">9.Spread Smiles</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">
+Doing a good deed for people will not only make them happy but you as well. You could visit an old-age home, orphanage, or an NGO. The choice is yours, just make sure that you spend a good time there and bring a smile on the faces of the people who need to smile more often. Helping others will instil a sense of gratitude and love in all your family members.
+</p>
+
+
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">10.Help Your Children with Their School Work</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">
+Take some time off to help your children with their school work.You need to know what’s going on in your child’s life, and at this point, school is their second home. Helping them out with their homework will allow you to figure out their weaknesses and strong points. Sparing time to spend with the children will instil a sense of confidence in them as well. They will be more open to coming face to face with their weaknesses and fears they have about school if you are by their side.
+</p>
+
+
+  </article>
+</section>
+
+<footer>
+<hr>
+<h2 style="text-align:left;">WAYS TO MAXIMIZE TIME WITH FRIENDS</h2>
+<p style="text-align:left;size: 5px;color:white" >
+
+<ul>
+<li>Go for a walk in</li>
+<li>Have a casino night</li>
+<li>Work out together</li>
+<li>Spend a spa day together</li>
+<li>Take in a lecture together</li>
+<li>Cook a meal together</li>
+<li>A cup of tea with friends</li>
+<li>Volunteer Together</li>
+</ul>
+
+</p>
+
+
+<br>
+</footer>
+</div>
+
+<br>
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
+
+
+
+

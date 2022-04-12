@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>EXERCISE</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="backbutton.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color:black;
+}
+
+.black-background {
+    background-color: black;
+    font-family: 'Amatic SC';
+    font-size: 20px;
+    font-weight: 100;
+    color: #ffd9ff;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    border-style: solid;
+    border-width: 1px;
+    
+  }
+
+/* Style the header */
+header {
+  background-color: black;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: #9eddff;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+  background-color:black;
+}
+
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: black;
+  padding: 20px;
+  
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: black;
+  padding: 10px;
+}
+
+/* Style the footer */
+footer {
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+  color: #9eddff;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 320px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.verticalimg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+.verticalimg img {
+        width: 250px;
+        height: 280px;
+        padding: 3px;
+        margin-left: 3px;
+        border-radius: 25px;
+      }
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 320px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.parent {
+        position: relative;
+        max-width: auto;
+        margin: 0 auto;
+      }
+
+.parent img {
+        vertical-align: middle;
+        height: 610px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+
+.parent .text {
+        font-family: 'Megrim';
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);/* Fallback color */
+        background: rgba(0, 0, 0, 0.5);/* Black background with opacity */
+        color: #ffffff;
+        width: 100%;
+        padding: 20px;
+      }
+
+
+.container {
+        display: flex;
+        align-items: center;
+        justify-content: center
+      }
+
+img {
+        max-width: 100%
+      }
+
+.image {
+        flex-basis: 55%;
+        height: 220px;
+      }
+      
+.text {
+        font-size: 20px;
+        padding-left: 20px;
+      }
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.stext {
+  color: black;
+  font-size: 50px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 290px;
+  width: 100%;
+  text-align: center;
+}
+
+.atext {
+  color: black;
+  font-size: 50px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 320px;
+  width: 100%;
+  text-align: center;
+}
+
+.btext {
+  color: black;
+  font-size: 50px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 260px;
+  width: 100%;
+  text-align: center;
+}
+/* Number text (1/5 etc) */
+.numbertext {
+  color: black;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (min-width: 320px) {
+  .prev, .next {font-size: 11px}
+}
+
+.card1 {
+      color: black;
+      float: left;
+      width: calc(25% - 20px);
+      padding: 10px;
+      border-radius: 10px;
+      height: 340px;
+      margin: 10px;
+      text-align:left;
+}
+   .card p {
+      font-size: 18px;
+   }
+   .cardContainer:after {
+      content: "";
+      display: table;
+      clear: both;
+      justify-content: space-around;
+   }
+
+.flex-container {
+display: flex;
+justify-content: space-around;
+}
+   @media screen and (max-width: 600px) {
+      .card {
+         width: 100%;
+      }
+   }
+</style>
+</head>
+<body>
+
+<div class="ctn">
+<a href="homepage_secondary.html" class="button b-blue">HOME</a>
+</div>
+
+<div class="parent">
+<img src="https://media.istockphoto.com/photos/cheerful-kids-sitting-on-fitness-mat-with-balls-picture-id1151201976?b=1&k=20&m=1151201976&s=170667a&w=0&h=6HUzY8Q3QtFN8lcrz_sGNV_kxBMRKPFvyc9JMjcUZk0=" style="width:100%;">
+<div class="text">
+<h1 style = "font-family:Amatic SC;font-size:50px;font-style:bold; text-align:left; color: #E7BFFF;">EXERCISE</h1>
+
+<p style = "font-size:30px; font-style:italic;color:#E7BFFF">
+"YOUR BODY CAN DO IT. IT'S TIME TO CONVINCE YOUR MIND"
+</p>
+
+</div>
+</div>
+
+<br>
+<div class="black-background">
+<h1 style = "text-align:center;">EXERCISE</h1>
+<p>
+The idea of exercising can be overwhelming, especially for someone dealing with a mental health issue.It is important to remember that when it
+comes to physical activity, anything is better than nothing!Start with whatever seems manageable.Even a ten minute walk can be helpful.
+You will likely be able to increase the amount and frequency of physical activity slowly as you start to feel better.Generally, doctors recommend about
+20-30 minutes of exercise three to five times per week, but it can be a good idea to talk with your own healthcare provider to decide what’s right for you.
+Don’t try to make a huge change in your exercise routine all at once.			
+</p> 
+<div class="text">
+<h3 style = "font-family:Amatic SC;color:#ffd9ff; font-size:50px;font-style:bold; text-align:left;">What are some benefits of exercise?</h3>
+<ol>
+  <li>Reduced symptoms of mental illness</li>
+  <li>The way your brain and body interact</li>
+  <li>Reduced stress resulting from burning off stress chemicals such as adrenaline</li>
+  <li>Improved memory</li>
+  <li>Increased energy</li>
+  <li>Improved sleep</li>
+  <li>Improved focus</li>
+  <li>Better regulation of mood</li>
+  <li>Weight loss</li>
+  <li>Increased sense of accomplishment and self-esteem</li>
+  <li>Distraction from negative thinking</li>
+  <li>Additional opportunities to meet others with similar interests</li>
+</ol> 
+</div>
+</div>
+<br>
+<br>
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 10</div>
+  <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8a2lkcyUyMGV4ZXJjaXNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" style="width:100%">
+  <div class="atext">POPULAR EXERCISES</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 10</div>
+  <img src="https://media.istockphoto.com/photos/multiethnic-group-of-school-children-laughing-and-running-picture-id1163705459?b=1&k=20&m=1163705459&s=170667a&w=0&h=V1bhlfMYyNsazwIVtz0S_RAqajl8rc1yjhrTToDhUYw=" style="width:100%">
+  <div class="stext">RUNNING</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 10</div>
+  <img src="https://media.istockphoto.com/photos/cheerful-kids-jumping-in-field-against-the-sky-picture-id170039509?b=1&k=20&m=170039509&s=170667a&w=0&h=mmwsNRXNDiTHOEfoJDVcKD22Nb-NyneeTjTlTdaa3qU=" style="width:100%">
+  <div class="stext">JUMPING</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 10</div>
+  <img src="https://media.istockphoto.com/photos/kids-playing-with-toy-blocks-against-white-background-laying-on-front-picture-id1248640135?b=1&k=20&m=1248640135&s=170667a&w=0&h=CrulEcK1rOmq0ShYMqgN-xJ-R_l8Riih9X6Wd_Isj0M=" style="width:100%">
+  <div class="stext">INDOOR GAMES</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 10</div>
+ <img src="https://media.istockphoto.com/photos/children-playing-with-skipping-rope-picture-id950604826?b=1&k=20&m=950604826&s=170667a&w=0&h=TO7fRBVlGhW0Dx4KFlly2EJ_aIc9YZ8GKgnz0snqndc=" style="width:100%">
+  <div class="atext">SKIPPING</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 10</div>
+  <img src="https://media.istockphoto.com/photos/three-peas-in-a-pod-picture-id104206005?b=1&k=20&m=104206005&s=170667a&w=0&h=5GxsNFF2OWP_8KpkLjBQzih9r0eF-xOvziLL5CbrALs=" style="width:100%">
+  <div class="btext">CRAB WALK</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">7 / 10</div>
+  <img src="https://media.istockphoto.com/photos/commit-to-be-fit-flexible-cute-little-girl-child-looking-aside-while-picture-id1211289804?b=1&k=20&m=1211289804&s=170667a&w=0&h=q2_C2Ixfu1a7D010UOXXvfj145xonTYgr8tf-b8ehVU=" style="width:100%">
+  <div class="stext">SIT-UPS</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">8 / 10</div>
+  <img src="https://media.istockphoto.com/photos/little-girl-doing-sport-picture-id620742308?b=1&k=20&m=620742308&s=170667a&w=0&h=yG83Q3K-liDGjJ58WX7w2J0inAjjXO2WSRkix_ahAQU=" style="width:100%">
+  <div class="btext">YOGA</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">9 / 10</div>
+  <img src="https://media.istockphoto.com/photos/little-girl-doing-squat-and-smiling-picture-id811805440?b=1&k=20&m=811805440&s=170667a&w=0&h=AFaXL2Wgkzho6IoBjIIVTBNBFw95pYCe14glEl5lM10=" style="width:100%">
+  <div class="stext">SQUATS AND LUNGES</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">10 / 10</div>
+  <img src="https://media.istockphoto.com/photos/happy-kids-swimming-underwater-in-pool-picture-id538602500?b=1&k=20&m=538602500&s=170667a&w=0&h=WAFETKuLoB8RlcL7fIDYO9dnEfV-6QWxpIYUY97asNQ=" style="width:100%">
+  <div class="stext">SWIMMING</div>
+</div>
+
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span> 
+</div>
+<br>
+
+<div class="black-background">
+<header>
+  <h3>TIPS FOR CREATING A WORKOUT PLAN</h3>
+</header>
+
+<section>
+  <nav>
+    <div class="verticalimg">
+      <br>
+      <img src=
+"https://media.istockphoto.com/photos/sports-girl-who-wants-to-start-the-new-year-2022-concept-of-new-in-picture-id1344917658?b=1&k=20&m=1344917658&s=170667a&w=0&h=sAmShJ9XG9bpsJOfMfgZVJczyiDXVlJyk19sIuT32RM="
+        alt="image-1"/>
+<br>
+      <img src=
+"https://media.istockphoto.com/photos/human-hand-preparing-workout-plan-picture-id928088390?b=1&k=20&m=928088390&s=170667a&w=0&h=g828Af30z7Z7cn82L9uPxhHRgmWDr20Wme3L63tYwOU="
+        alt="image-2"/>
+<br>
+      <img src=
+"https://i.pinimg.com/564x/18/38/7c/18387c1fd5c96657f0e3cb1b8b479151.jpg"
+        alt="image-3"/>
+<br>
+      <img src=
+"https://i.pinimg.com/564x/2b/3f/52/2b3f52853be9d9799d3e10a3e0cba632.jpg"
+        alt="image-4"/>
+<br>
+      <img src=
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfip3XaBusECtjbeU4vaqG0W9jm43yzxDsSw&usqp=CAU"
+        alt="image-5"/>
+<br>
+      <img src=
+"https://media.istockphoto.com/photos/running-female-with-mobile-phone-connected-to-a-smart-watch-picture-id860688956?b=1&k=20&m=860688956&s=170667a&w=0&h=qZUf5uS-zolHE8mWRAScTCLQYE-mN_HYhINhc8gY_Eo=  "
+        alt="image-6"/>
+<br>
+      <img src=
+"https://i.pinimg.com/474x/13/6e/b9/136eb9627cc00b85353df13ff0747ce9.jpg"
+        alt="image-7"/>
+<br>
+      <img src=
+"https://i.pinimg.com/564x/e8/38/8f/e8388f05d77f9003448e53570aa75aca.jpg"
+        alt="image-8"/>
+</div>
+  </nav>
+
+  <article>
+    <h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">1.Figure out what your fitness goals are.</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:23px;color: white;">
+The first thing you should do to start a workout plan for college is to write out your goals.Different goals require different workout plans.
+One thing you need to do before picking out workout plans to know what you want out of working out.Your main goal shouldn’t also be something so unrealistic.
+Setting unrealistic goals can lead to more problems down the line.In the beginning, your fitness goals should not be to lose 20 pounds in a week.
+Completing a difficult workout or even actually showing up to a workout class are nice goals as well.Don’t put so much pressure on yourself either.
+Start out easy and work your way up.
+</p>
+
+
+
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">2.Research!</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">
+The next step in forming a workout plan is to do research. Research what exercises work best for your goal.Also, research what foods will give you energy
+and healthier recipes.Find out what your body type is (ectomorph, mesomorph, and endomorph) and what it needs to gain muscle or lose weight.If you are 
+taking on a workout plan that you found online, look up reviews and not just results.Different bodies will react differently to the same workout.
+Research also can give you tips to not injure yourself.
+</p>
+
+
+<br>
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">3.Eat healthier and better.Not less.</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">
+Figure out an eating plan (not a diet plan) that works for you.Include foods that you love and new foods.Diet culture is dangerous and is high amongst 
+college students and has increased due to social media.So many fad diets are out there and are NOT healthy.There is also so much false information on 
+social media.If you truly want to lose weight or even gain weight, do research and preferably contact a doctor.Be mindful and aware of what your body needs.
+
+</p>
+
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">4.Space out the time you need to work out.</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">
+You should find the best time for you to exercise.A little each day eventually adds up.
+
+</p>
+
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">5.Find beginner (or whatever level you are on) workouts that you can do.</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">A simple YouTube search for “workouts for beginners” or “beginners yoga” or “pilates for beginners” 
+can give you so many videos.Find videos of workouts that are doable for you. Don’t try to overdo yourself when you first start.
+Beginner workouts can sometimes get intense and take a lot of energy.Do not allow the word, “beginner” to intimidate you or make your feel weak.
+
+</p>
+
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">6.Find workouts that you like.</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">Doing workouts that make you feel like you’re having fun or at least kind of.
+Don’t force yourself to do a workout that is difficult or if you’re not liking it.Not every workout will be one for you.
+
+</p>
+
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">7.Don’t force yourself to workout every day.Give yourself breaks.
+</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">Your body needs a rest day (or days) from exercising because you can seriously injure yourself.
+Our bodies need time to repair muscle. Resting is completely fine.
+
+</p>
+
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">8.Use apps to track your meals and calories.
+</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">
+Retake your personal fitness assessment six weeks after you start your program and then again every few months.You may notice that you need to increase
+the amount of time you exercise in order to continue improving.Or you may be pleasantly surprised to find that you're exercising just the right 
+amount to meet your fitness goals.If you are into calorie counting or keeping up with what you ate during the day, try downloading apps such as 
+Lifesum and MyPlate Calorie Counter.
+
+</p>
+
+
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">9.Assemble your equipment. 
+</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">
+You'll probably start with athletic shoes. Be sure to pick shoes designed for the activity you have in mind. For example, running shoes are lighter 
+in weight than cross-training shoes, which are more supportive.If you're planning to invest in exercise equipment, choose something that's practical,
+enjoyable and easy to use. You may want to try out certain types of equipment at a fitness center before investing in your own equipment.Wearing workout
+clothes can definitely boost your motivation and drive to complete a workout.You should always have a yoga mat and a yoga strap too. 
+No matter what you are going to eventually need one.If you plan on working out on the floor, use gloves.
+
+</p>
+
+
+<h2 style = "color: #ffd9ff; font-style:bold; text-align:left; font-size:30px">10.Work on body positivity and self-love, too!
+</h2>
+
+<p style = "font-family:'Loved by the King'; font-size:25px;color: white;">
+Working out should all about see what your body can do. It’s also about taking care of your body and muscles. Exercising has so many benefits outside of 
+weight management. It gives you a boost in energy and happiness.You should never work out to punish yourself for eating too much.You should develop 
+positive and healthy exercising habits.
+
+</p>
+
+  </article>
+</section>
+
+
+</div>
+
+<br>
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
+
