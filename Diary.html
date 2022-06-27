@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=+, initial-scale=1.0">
+    <title>Diary</title>
+    <link rel="stylesheet" href="./css/Diary.css">
+    <link href='https://fonts.googleapis.com/css?family=Loved by the King' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <link rel="stylesheet" href="./css/back_button.css">
+    
+</head>
+<body>
+    
+<header>
+        <div class="ctn">
+            <a href="recommendation.html" class="button b-blue">Home</a>
+        </div>
+    </header>
+    <div class="container">
+        <img src=".\images\Diary.jpg" width = 100% height = 500px> 
+    </div>
+    <br>
+    <div class="black-background">
+    There are many reasons why we journal. From travel journals, dream journals, gratitude journals to prayer journals, we keep 
+        specific journals for different aspects of our life. In the past, many people kept personal journals, where they recorded 
+        the day's events and their observations. Without diarists like Anne Frank and Samuel Pepys, we wouldn't know much about the 
+        personal side of our history.<br>
+        There are many benefits of keeping a journal:<br>
+        1. Keeps your thoughts organized.<br>
+        2. Improves your writing<br>
+        3. Relieve stress.<br>
+        4. Record ideas on-the-go<br>
+        <br>
+        Here's a space for you to vent your feelings. 
+
+    </div>
+    <br>
+    <br>
+    <div class="wrapper txt-center">
+        <textarea id = "txt" rows = "3" placeholder="How was your day?"></textarea>
+        <br>
+        <br>
+        <div class="text-l">
+            <button class="button b-blue" onclick="getRs()">Create</button></div>
+    </div>
+    <div id = "rs" class="wrapper"></div>
+    <script src = "Diary.js"></script>
+</body>
+</html>
+  
